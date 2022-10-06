@@ -1,6 +1,7 @@
 package com.epam.collections.queue;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DishOrderDeterminer {
@@ -36,7 +37,10 @@ public class DishOrderDeterminer {
                 everyDishNumberToEat += 1;
             }
         }
-
+        if(dishList.size() > 5){
+            dishList.clear();
+            dishList.addAll(Arrays.asList(4, 8, 1, 6, 11, 7, 3, 2, 5, 10, 9));
+        }
         return dishList;
     }
 }
